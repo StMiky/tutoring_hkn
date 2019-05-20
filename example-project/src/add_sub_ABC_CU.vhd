@@ -36,7 +36,7 @@ end add_sub_ABC_CU;
 
 architecture behaviour of add_sub_ABC_CU is
 	-- Better to cap STATES
-	type state_type is (RESET, IDLE, ABCSV, CSV_ACPR_SUM, CSV_ACPR_SUB, OUT0_BCPR_SUM, OUT0_BCPR_SUB, OUT1_DONE);
+	type state_type is (RESET, IDLE, ABCSV, CSV_ACPR_SUM, CSV_ACPR_SUB, OUT0_BCPR_SUM, OUT0_BCPR_SUB, OUT1);
 
 	signal pres_state, next_state : state_type;
 		 
@@ -77,11 +77,11 @@ begin
 										next_state <= OUT0_BCPR_SUB;
 							        end if;
 			
-			when OUT0_BCPR_SUM => next_state <= OUT1_DONE;
+			when OUT0_BCPR_SUM => next_state <= OUT1;
 			
-			when OUT0_BCPR_SUB => next_state <= OUT1_DONE;
+			when OUT0_BCPR_SUB => next_state <= OUT1;
 			
-			when OUT1_DONE => next_state <= IDLE;
+			when OUT1 => next_state <= IDLE;
 			
 			when others => next_state <= RESET; -- IMPORTANT!!!: avoid unknown states
 			
@@ -115,7 +115,7 @@ begin
 	
 		-- std assignments
 		clr_regSum <= '0';
-		clr_regs <= '1';
+		clr_regs <= '0';
 		en_regA <= '0';
 		en_regB <= '0';
 		en_regC <= '0';
@@ -126,9 +126,10 @@ begin
 	
 		-- specific assignments
 		case pres_state is
-			when RESET => clr_regs <= '0';
+			when RESET => clr_regs <= '1';
+							  clr_regSum <= '1';
 		
-			when IDLE => clr_regSum <= '0';
+			when IDLE => clr_regSum <= '1';
 			
 			when ABCSV => en_regA <= '1';
 			              en_regB <= '1';
@@ -143,15 +144,14 @@ begin
 									sub <= '1';
 										  
 			when OUT0_BCPR_SUM => 	en_regSum <= '1';
-			                      	sub <= '0';
-									-- clr_regSum <= '1';
+											sub <= '0';
+											done <= '1';
 										 
 			when OUT0_BCPR_SUB => 	en_regSum <= '1';
-			                       	sub <= '1';
-									-- clr_regSum <= '1';
+											sub <= '1';
+											done <= '1';
 										  
-			when OUT1_DONE => 	done <= '1';
-			                  	clr_regSum <= '1';
+			when OUT1 => 
 			
 		end case;
 	end process;

@@ -2,7 +2,7 @@
 % Input patterns generation and output verification
 
 clc
-%clear all
+clear all
 
 %% Variables
 
@@ -63,6 +63,8 @@ outFromSW_fixed = fi(res, 1, bit_n+1, 0);
 
 outFromSW = outFromSW_fixed.bin;
 
+dlmwrite('../common/SW_output.txt', outFromSW, 'delimiter', '', 'newline', 'unix');
+
 disp("NOTE! Execution stopped: please run the VHDL simulation and press a key")
 
 pause
@@ -90,6 +92,8 @@ for i=1:2*N
     end
 end
 % matches'
+match_n = sum(matches(:));
+fprintf('Hit ratio: %.2f%%\n', match_n/length(matches)*100)
 if(matches == ones(2*N, 1))
     disp("Great! You have a chance to pass the exam :P")
 else 

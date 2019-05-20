@@ -37,26 +37,25 @@ architecture behaviour of add_sub_ABC_tb is
     				C : in std_logic_vector(nBit_in-1 downto 0);
     			 -- OUTPUTS
     				-- signals from CU
-                    data_ready: out std_logic;
     				done : out std_logic;
     				-- data from DP
     				data_out : out std_logic_vector(nBit_in downto 0)
     			);
     end component;
 
-    component CU_add_sub_ABC_tb
+    component add_sub_ABC_tb_CU is
         port(
         -- INPUT SIGNALS
             clock: in std_logic; -- clock (generated in testbench DP)
-            reset: in std_logic; -- reset signal
+            reset_n: in std_logic; -- reset signal
             start: in std_logic; -- testbench start signal
-            add_sub_ABC_data_ready: in std_logic; -- DUT done signal
+            add_sub_ABC_done: in std_logic; -- DUT done signal
             freader_done: in std_logic; -- file reader done signal
         -- OUTPUT SIGNALS
             -- DUT:
             add_sub_ABC_start: out std_logic; -- DUT start signal
             add_sub_ABC_rst_n: out std_logic; -- DUT reset signal (active low)
-
+    
             -- FILE reader/writer:
             AB_freader_enable: out std_logic; -- input file reader enable
             C_freader_enable: out std_logic; -- input file reader enable
@@ -64,6 +63,20 @@ architecture behaviour of add_sub_ABC_tb is
             fwriter_enable: out std_logic -- output file writer enable
         );
     end component;
+
+    component reg_n is
+		generic ( n : integer := 3 );
+		port ( 
+                clk,
+                en,
+                rst_n,
+                clr : in std_logic;
+
+                D : in std_logic_vector(n-1 downto 0);
+            
+                Q : out std_logic_vector(n-1 downto 0)
+            );
+	end component;
 
     component text_in
         generic(bit_n: integer:=16);
@@ -91,7 +104,7 @@ architecture behaviour of add_sub_ABC_tb is
 
     -- TESTBENCH SIGNALS
     signal clock: std_logic:='0';
-    signal reset: std_logic:='0';
+    signal reset_n: std_logic:='1';
     signal start: std_logic:='0';
 
     -- CU SIGNALS
@@ -110,23 +123,34 @@ architecture behaviour of add_sub_ABC_tb is
     signal sign_freader_done, A_freader_done, B_freader_done, C_freader_done, freader_done: std_logic;
 
     -- DUT SIGNALS
-    signal add_sub_ABC_data_ready: std_logic;
-    signal add_sub_ABC_out: std_logic_vector(bit_n downto 0);
+    signal add_sub_ABC_done: std_logic;
+    signal add_sub_ABC_out, sampled_out: std_logic_vector(bit_n downto 0);
 
 begin
     --Clock generation
     clock <= not clock after 20 ns;
     -- Reset generation
-    reset <= '1' after 30 ns, '0' after 70 ns;
+    reset_n <= '0' after 30 ns, '1' after 70 ns;
     -- Start generation
     start <= '1' after 110 ns, '0' after 200 ns;
 
     -- Here assignation is POSITIONAL. See how messy it is!
     -- Control Unit of the testbench
-    control_unit: CU_add_sub_ABC_tb port map (clock, reset, start, add_sub_ABC_data_ready, freader_done, add_sub_ABC_start, add_sub_ABC_rst_n, AB_freader_enable, C_freader_enable, sign_freader_enable, fwriter_enable);
+    control_unit: add_sub_ABC_tb_CU port map (clock, reset_n, start, add_sub_ABC_done, freader_done, add_sub_ABC_start, add_sub_ABC_rst_n, AB_freader_enable, C_freader_enable, sign_freader_enable, fwriter_enable); -- Positional mapping: not so clear
 
     -- DUT
-    device: add_sub_ABC generic map (bit_n) port map (clock, add_sub_ABC_rst_n, add_sub_ABC_start, sign_freader_data(0), A_freader_data, B_freader_data, C_freader_data, add_sub_ABC_data_ready, open, add_sub_ABC_out);
+    device: add_sub_ABC generic map (bit_n) 
+    port map (
+        clk => clock, 
+        rst_n => add_sub_ABC_rst_n, 
+        start => add_sub_ABC_start, 
+        sign => sign_freader_data(0), 
+        A => A_freader_data, 
+        B => B_freader_data, 
+        C => C_freader_data, 
+        done => add_sub_ABC_done, 
+        data_out => add_sub_ABC_out
+    ); -- Mapping by name: safer
 
     -- Input files readers
     A_freader: text_in generic map (bit_n) port map (clock, AB_freader_enable, "../common/A.txt", A_freader_data, A_freader_done);
@@ -137,6 +161,18 @@ begin
     -- Set this signal whenver a reader reaches the end of the input file
     freader_done <= sign_freader_done or A_freader_done or B_freader_done or C_freader_done;
 
+    -- Input data register (samples the result of the DUT)
+
+    reg_res : reg_n generic map ( n => bit_n+1)  
+    port map (
+        clk => clock,
+        en => '1',
+        rst_n => reset_n,
+        clr => '0',
+        D => add_sub_ABC_out,
+        Q => sampled_out
+    );
+
     -- Output file writer
-    output_fwriter: text_out generic map (bit_n+1) port map (clock, fwriter_enable, "../common/output.txt", add_sub_ABC_out);
+    output_fwriter: text_out generic map (bit_n+1) port map (clock, fwriter_enable, "../common/output.txt", sampled_out);
 end architecture behaviour;

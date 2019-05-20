@@ -17,7 +17,6 @@ entity text_in is
         clock: in std_logic; -- clock signal
         enable: in std_logic; -- enable signal
         file_name: in string; -- name of the file to read the files from
-        -- mode: in string;
     -- OUTPUT SIGNALS
         data: out std_logic_vector(bit_n-1 downto 0);
         done: out std_logic
@@ -25,8 +24,6 @@ entity text_in is
 end text_in;
 
 architecture behaviour of text_in is
-
-    signal linenumber: integer:=1;
 
 begin
     reading_process: process(clock, enable)
@@ -51,8 +48,6 @@ begin
 
         done <= EOF;
         data <= to_stdlogicvector(read_data);
-
-        -- file_close(input_file);
 
     end process;
 

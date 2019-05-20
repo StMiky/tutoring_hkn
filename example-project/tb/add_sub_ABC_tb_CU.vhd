@@ -10,9 +10,9 @@ entity add_sub_ABC_tb_CU is
     port(
     -- INPUT SIGNALS
         clock: in std_logic; -- clock (generated in testbench DP)
-        reset: in std_logic; -- reset signal
+        reset_n: in std_logic; -- reset signal
         start: in std_logic; -- testbench start signal
-        add_sub_ABC_data_ready: in std_logic; -- DUT done signal
+        add_sub_ABC_done: in std_logic; -- DUT done signal
         freader_done: in std_logic; -- file reader done signal
     -- OUTPUT SIGNALS
         -- DUT:
@@ -34,19 +34,17 @@ architecture behaviour of add_sub_ABC_tb_CU is
 
 begin
     -- State update ns_process
-    state_update: process(clock, reset)
+    state_update: process(clock, reset_n)
     begin
-        if(clock'event and clock = '1') then
-            if(reset = '1') then
-                pres_state <= RST;
-            else
-                pres_state <= next_state;
-            end if;
+        if(reset_n = '0') then 
+            pres_state <= RST;
+        elsif(clock'event and clock = '1') then
+            pres_state <= next_state;
         end if;
     end process;
 
     -- State evolution process
-    state_evolution: process(pres_state, add_sub_ABC_data_ready, freader_done, start)
+    state_evolution: process(pres_state, add_sub_ABC_done, freader_done, start)
     begin
         case pres_state is
             when RST => next_state <= IDLE;
@@ -69,7 +67,7 @@ begin
 
             when SEND_ABC0 => next_state <= SEND_ABC1;
 
-            when SEND_ABC1 =>   if(add_sub_ABC_data_ready = '1') then
+            when SEND_ABC1 =>   if(add_sub_ABC_done = '1') then
                                     next_state <= SAVE_OUT0;
                                 else
                                     next_state <= SEND_ABC1;

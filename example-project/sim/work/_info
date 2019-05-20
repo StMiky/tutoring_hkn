@@ -1,365 +1,406 @@
 m255
 K3
+z0
 13
 cModel Technology
 d/home/matteo/git/tutoring_hkn/vhdl_material/sequential/sim
 Eadd_sub_abc
-Z0 w1542387729
-Z1 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
-Z2 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
-Z3 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
-Z4 d/home/matteo/git/tutoring_hkn/example-project/sim
-Z5 8/home/matteo/git/tutoring_hkn/example-project/src/add_sub_ABC.vhd
-Z6 F/home/matteo/git/tutoring_hkn/example-project/src/add_sub_ABC.vhd
+Z0 w1558382710
+Z1 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z4 d/home/michi/Documents/git-projects/tutoring_hkn/example-project/sim
+Z5 8/home/michi/Documents/git-projects/tutoring_hkn/example-project/src/add_sub_ABC.vhd
+Z6 F/home/michi/Documents/git-projects/tutoring_hkn/example-project/src/add_sub_ABC.vhd
 l0
 L9
-V1QI<LCeHg9A>8iXNDNS1R1
-Z7 OV;C;10.1d;51
+VTkbZ2DPHa_^Scff^XB7S`2
+!s100 @?6ZB6KeA0n5Vm_0DP?TV1
+Z7 OV;C;10.5b;63
 32
-Z8 !s108 1542387734.203306
-Z9 !s90 -reportprogress|300|-work|work|-2002|-explicit|/home/matteo/git/tutoring_hkn/example-project/src/add_sub_ABC.vhd|
-Z10 !s107 /home/matteo/git/tutoring_hkn/example-project/src/add_sub_ABC.vhd|
-Z11 o-work work -2002 -explicit -O0
-Z12 tExplicit 1
-!s100 i@?iKbXdc8gocgOdZ>hCE3
+Z8 !s110 1558388228
 !i10b 1
+Z9 !s108 1558388227.000000
+Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/michi/Documents/git-projects/tutoring_hkn/example-project/src/add_sub_ABC.vhd|
+Z11 !s107 /home/michi/Documents/git-projects/tutoring_hkn/example-project/src/add_sub_ABC.vhd|
+!i113 1
+Z12 o-work work -2002 -explicit
+Z13 tExplicit 1 CvgOpt 0
 Astructure
 R1
 R2
 R3
-DEx4 work 11 add_sub_abc 0 22 1QI<LCeHg9A>8iXNDNS1R1
+DEx4 work 11 add_sub_abc 0 22 TkbZ2DPHa_^Scff^XB7S`2
 l104
 L39
-V`AXm]Q1J>j9]0MFUH6AYQ1
+VWc2g]>8R0HMZA@eA=?kn`2
+!s100 08Y69SVo6T1;fg;4NMf523
 R7
 32
 R8
+!i10b 1
 R9
 R10
 R11
+!i113 1
 R12
-!s100 j_KofdIazB7<MB]na[23o3
-!i10b 1
+R13
 Eadd_sub_abc_cu
-Z13 w1542387256
+Z14 w1558387621
 R2
 R3
 R4
-Z14 8/home/matteo/git/tutoring_hkn/example-project/src/add_sub_ABC_CU.vhd
-Z15 F/home/matteo/git/tutoring_hkn/example-project/src/add_sub_ABC_CU.vhd
+Z15 8/home/michi/Documents/git-projects/tutoring_hkn/example-project/src/add_sub_ABC_CU.vhd
+Z16 F/home/michi/Documents/git-projects/tutoring_hkn/example-project/src/add_sub_ABC_CU.vhd
 l0
 L10
-Vc^`dWbAU=O42H;8`<Z6j[0
+Vc_8JQA20A`CHEI;<ZdCmo0
+!s100 SR`n?RRZK0z?W`Qm1`4j92
 R7
 32
-Z16 !s108 1542387734.229117
-Z17 !s90 -reportprogress|300|-work|work|-2002|-explicit|/home/matteo/git/tutoring_hkn/example-project/src/add_sub_ABC_CU.vhd|
-Z18 !s107 /home/matteo/git/tutoring_hkn/example-project/src/add_sub_ABC_CU.vhd|
-R11
-R12
-!s100 jzTDCobZ5A6]fY:f];`JW2
+R8
 !i10b 1
+Z17 !s108 1558388228.000000
+Z18 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/michi/Documents/git-projects/tutoring_hkn/example-project/src/add_sub_ABC_CU.vhd|
+Z19 !s107 /home/michi/Documents/git-projects/tutoring_hkn/example-project/src/add_sub_ABC_CU.vhd|
+!i113 1
+R12
+R13
 Abehaviour
 R2
 R3
-DEx4 work 14 add_sub_abc_cu 0 22 c^`dWbAU=O42H;8`<Z6j[0
+DEx4 work 14 add_sub_abc_cu 0 22 c_8JQA20A`CHEI;<ZdCmo0
 l43
 L37
-V4Tg=H4J0>TILz15jnF00h2
+V4=loi[a>S<ZU9<4gERHaW2
+!s100 >BTU54gg_XJQ[=aaAPP3h3
 R7
 32
-R16
+R8
+!i10b 1
 R17
 R18
-R11
+R19
+!i113 1
 R12
-!s100 ?4fZSAg_bPO9CV46e_7;L3
-!i10b 1
-Eadd_sub_abc_dp
 R13
+Eadd_sub_abc_dp
+Z20 w1558386053
 R1
 R2
 R3
 R4
-Z19 8/home/matteo/git/tutoring_hkn/example-project/src/add_sub_ABC_DP.vhd
-Z20 F/home/matteo/git/tutoring_hkn/example-project/src/add_sub_ABC_DP.vhd
+Z21 8/home/michi/Documents/git-projects/tutoring_hkn/example-project/src/add_sub_ABC_DP.vhd
+Z22 F/home/michi/Documents/git-projects/tutoring_hkn/example-project/src/add_sub_ABC_DP.vhd
 l0
 L11
-V6V=o>7_bQ7`=m7<h:jGRn0
+VB97eI62:CP=z`VAENVLg]3
+!s100 L2ldkfAmE=ZK]hSEJh9k63
 R7
 32
-Z21 !s108 1542387734.250332
-Z22 !s90 -reportprogress|300|-work|work|-2002|-explicit|/home/matteo/git/tutoring_hkn/example-project/src/add_sub_ABC_DP.vhd|
-Z23 !s107 /home/matteo/git/tutoring_hkn/example-project/src/add_sub_ABC_DP.vhd|
-R11
-R12
-!s100 ;d`e3Fg]6`BUGB:l>f=9Y3
+R8
 !i10b 1
+R17
+Z23 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/michi/Documents/git-projects/tutoring_hkn/example-project/src/add_sub_ABC_DP.vhd|
+Z24 !s107 /home/michi/Documents/git-projects/tutoring_hkn/example-project/src/add_sub_ABC_DP.vhd|
+!i113 1
+R12
+R13
 Abehaviour
 R1
 R2
 R3
-DEx4 work 14 add_sub_abc_dp 0 22 6V=o>7_bQ7`=m7<h:jGRn0
+DEx4 work 14 add_sub_abc_dp 0 22 B97eI62:CP=z`VAENVLg]3
 l90
 L37
-VJge@a26O7>Q@OIB7_1Y?j2
+Vo;WMESC?7IO<5>[10eIWm3
+!s100 XeIViA;<eMgRA1z>_=U:I2
 R7
 32
-R21
-R22
-R23
-R11
-R12
-!s100 ^2kmWF664UAfGFKQ_HVid2
+R8
 !i10b 1
-Eadd_sub_abc_tb
+R17
+R23
+R24
+!i113 1
+R12
 R13
+Eadd_sub_abc_tb
+Z25 w1558388224
 R2
 R3
 R4
-Z24 8/home/matteo/git/tutoring_hkn/example-project/tb/add_sub_ABC_tb.vhd
-Z25 F/home/matteo/git/tutoring_hkn/example-project/tb/add_sub_ABC_tb.vhd
+Z26 8/home/michi/Documents/git-projects/tutoring_hkn/example-project/tb/add_sub_ABC_tb.vhd
+Z27 F/home/michi/Documents/git-projects/tutoring_hkn/example-project/tb/add_sub_ABC_tb.vhd
 l0
 L13
-VnYC2Cc0VDzH;S7kZ1j`i^1
+Vh^UE1]geCP6SD<;6Vjihh0
+!s100 @;Z6GO?WSDBTo^3_=PIWz3
 R7
 32
-Z26 !s108 1542387734.341541
-Z27 !s90 -reportprogress|300|-work|work|-2002|-explicit|/home/matteo/git/tutoring_hkn/example-project/tb/add_sub_ABC_tb.vhd|
-Z28 !s107 /home/matteo/git/tutoring_hkn/example-project/tb/add_sub_ABC_tb.vhd|
-R11
-R12
-!s100 Z4l^FRO?TP;TbNljEFKRK3
+R8
 !i10b 1
+R17
+Z28 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/michi/Documents/git-projects/tutoring_hkn/example-project/tb/add_sub_ABC_tb.vhd|
+Z29 !s107 /home/michi/Documents/git-projects/tutoring_hkn/example-project/tb/add_sub_ABC_tb.vhd|
+!i113 1
+R12
+R13
 Abehaviour
 R2
 R3
-DEx4 work 14 add_sub_abc_tb 0 22 nYC2Cc0VDzH;S7kZ1j`i^1
-l116
+DEx4 work 14 add_sub_abc_tb 0 22 h^UE1]geCP6SD<;6Vjihh0
+l129
 L18
-VIo1GW5bLSWMJIi:^CL?[P0
+VaRhJMjSJ0[81RH29NSY8<2
+!s100 >eMSZBHPfMAV[h9j4>UF=2
 R7
 32
-R26
-R27
-R28
-R11
-R12
-!s100 A@7BGe;m5oJlG<lM]XeJJ2
+R8
 !i10b 1
-Eadd_sub_abc_tb_cu
+R17
+R28
+R29
+!i113 1
+R12
 R13
+Eadd_sub_abc_tb_cu
+Z30 w1558388184
 R2
 R3
 R4
-Z29 8/home/matteo/git/tutoring_hkn/example-project/tb/add_sub_ABC_tb_CU.vhd
-Z30 F/home/matteo/git/tutoring_hkn/example-project/tb/add_sub_ABC_tb_CU.vhd
+Z31 8/home/michi/Documents/git-projects/tutoring_hkn/example-project/tb/add_sub_ABC_tb_CU.vhd
+Z32 F/home/michi/Documents/git-projects/tutoring_hkn/example-project/tb/add_sub_ABC_tb_CU.vhd
 l0
 L9
-V?]ADO:PGl0gO4FbGgV@XJ2
+VIAE23>fc?ES;R4:36KBjc3
+!s100 eAkNmiZFG9;QY7a4bLkz12
 R7
 32
-Z31 !s108 1542387734.363066
-Z32 !s90 -reportprogress|300|-work|work|-2002|-explicit|/home/matteo/git/tutoring_hkn/example-project/tb/add_sub_ABC_tb_CU.vhd|
-Z33 !s107 /home/matteo/git/tutoring_hkn/example-project/tb/add_sub_ABC_tb_CU.vhd|
-R11
-R12
-!s100 0OSU`fL72[eM[XUh7g[;;0
+R8
 !i10b 1
+R17
+Z33 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/michi/Documents/git-projects/tutoring_hkn/example-project/tb/add_sub_ABC_tb_CU.vhd|
+Z34 !s107 /home/michi/Documents/git-projects/tutoring_hkn/example-project/tb/add_sub_ABC_tb_CU.vhd|
+!i113 1
+R12
+R13
 Abehaviour
 R2
 R3
-DEx4 work 17 add_sub_abc_tb_cu 0 22 ?]ADO:PGl0gO4FbGgV@XJ2
+DEx4 work 17 add_sub_abc_tb_cu 0 22 IAE23>fc?ES;R4:36KBjc3
 l35
 L30
-V1QjchiMzfRJ57c0Mi5SNW1
+V>9Q4Lbn^3Ib[2iR6KQbPg2
+!s100 A[N:3Lo5QSFAdX;ZIHUna2
 R7
 32
-R31
-R32
-R33
-R11
-R12
-!s100 B=NMAHc>j6c0AJVe=zeHh0
+R8
 !i10b 1
-Eadder_sub_beh
+R17
+R33
+R34
+!i113 1
+R12
 R13
+Eadder_sub_beh
+Z35 w1558385270
 R1
 R2
 R3
 R4
-Z34 8/home/matteo/git/tutoring_hkn/example-project/src/adder_sub_beh.vhd
-Z35 F/home/matteo/git/tutoring_hkn/example-project/src/adder_sub_beh.vhd
+Z36 8/home/michi/Documents/git-projects/tutoring_hkn/example-project/src/adder_sub_beh.vhd
+Z37 F/home/michi/Documents/git-projects/tutoring_hkn/example-project/src/adder_sub_beh.vhd
 l0
 L5
-VDM9O4VVNINF>FgVl>TYmB1
+VCXA[Bd[lTYg`aFng97@Ue3
+!s100 K58`V>TSDCGBUQZXRCd_]2
 R7
 32
-Z36 !s108 1542387734.275748
-Z37 !s90 -reportprogress|300|-work|work|-2002|-explicit|/home/matteo/git/tutoring_hkn/example-project/src/adder_sub_beh.vhd|
-Z38 !s107 /home/matteo/git/tutoring_hkn/example-project/src/adder_sub_beh.vhd|
-R11
-R12
-!s100 NWOaYle[j]0lOD0I05GAm1
+R8
 !i10b 1
+R17
+Z38 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/michi/Documents/git-projects/tutoring_hkn/example-project/src/adder_sub_beh.vhd|
+Z39 !s107 /home/michi/Documents/git-projects/tutoring_hkn/example-project/src/adder_sub_beh.vhd|
+!i113 1
+R12
+R13
 Abehaviour
 R1
 R2
 R3
-DEx4 work 13 adder_sub_beh 0 22 DM9O4VVNINF>FgVl>TYmB1
+DEx4 work 13 adder_sub_beh 0 22 CXA[Bd[lTYg`aFng97@Ue3
 l21
 L17
-V[NPOMOgioX3mPC?PgKjR21
+VJgn6]Coa75;<XPGnTPaW>0
+!s100 `;8NmY2dQB_[@>bPK^HO80
 R7
 32
-R36
-R37
-R38
-R11
-R12
-!s100 f9T9SGiQ@?lQa:HOS]IXI2
+R8
 !i10b 1
-Emux2
+R17
+R38
+R39
+!i113 1
+R12
 R13
+Emux2
+Z40 w1558372398
 R2
 R3
 R4
-Z39 8/home/matteo/git/tutoring_hkn/example-project/src/mux2.vhd
-Z40 F/home/matteo/git/tutoring_hkn/example-project/src/mux2.vhd
+Z41 8/home/michi/Documents/git-projects/tutoring_hkn/example-project/src/mux2.vhd
+Z42 F/home/michi/Documents/git-projects/tutoring_hkn/example-project/src/mux2.vhd
 l0
 L4
-Vk6_QicG^JVn;CM1d^c^`M2
+VH6kJ;@?zaI2z>Pii^?d<Y3
+!s100 @iSzzVbAVk[oB;;lQWaN]3
 R7
 32
-Z41 !s108 1542387734.302168
-Z42 !s90 -reportprogress|300|-work|work|-2002|-explicit|/home/matteo/git/tutoring_hkn/example-project/src/mux2.vhd|
-Z43 !s107 /home/matteo/git/tutoring_hkn/example-project/src/mux2.vhd|
-R11
-R12
-!s100 f6ILb=EfK`nBI4QjHH1M92
+R8
 !i10b 1
+R17
+Z43 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/michi/Documents/git-projects/tutoring_hkn/example-project/src/mux2.vhd|
+Z44 !s107 /home/michi/Documents/git-projects/tutoring_hkn/example-project/src/mux2.vhd|
+!i113 1
+R12
+R13
 Abehaviour
 R2
 R3
-DEx4 work 4 mux2 0 22 k6_QicG^JVn;CM1d^c^`M2
+DEx4 work 4 mux2 0 22 H6kJ;@?zaI2z>Pii^?d<Y3
 l17
 L16
-VIo[J`jfZkAa6MihGIibf93
+VdaXHO_j`H4WU?<7jVhOKm3
+!s100 TFCB8IV<SBKU6:JkbQ5XG3
 R7
 32
-R41
-R42
-R43
-R11
-R12
-!s100 QHP[ifMSHod;X:^gIAmFX2
+R8
 !i10b 1
-Ereg_n
+R17
+R43
+R44
+!i113 1
+R12
 R13
+Ereg_n
+Z45 w1558387152
 R2
 R3
 R4
-Z44 8/home/matteo/git/tutoring_hkn/example-project/src/reg_n.vhd
-Z45 F/home/matteo/git/tutoring_hkn/example-project/src/reg_n.vhd
+Z46 8/home/michi/Documents/git-projects/tutoring_hkn/example-project/src/reg_n.vhd
+Z47 F/home/michi/Documents/git-projects/tutoring_hkn/example-project/src/reg_n.vhd
 l0
 L4
-V]SP4l?H3Bn0^4EMEf]I1X3
+VmI[nUVK^K1FoQzkiH^?^e1
+!s100 gQmBNNLk_@[[ddTGhM0od0
 R7
 32
-Z46 !s108 1542387734.321924
-Z47 !s90 -reportprogress|300|-work|work|-2002|-explicit|/home/matteo/git/tutoring_hkn/example-project/src/reg_n.vhd|
-Z48 !s107 /home/matteo/git/tutoring_hkn/example-project/src/reg_n.vhd|
-R11
-R12
-!s100 aMc7T0DJ994d549J4CdOj2
+R8
 !i10b 1
+R17
+Z48 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/michi/Documents/git-projects/tutoring_hkn/example-project/src/reg_n.vhd|
+Z49 !s107 /home/michi/Documents/git-projects/tutoring_hkn/example-project/src/reg_n.vhd|
+!i113 1
+R12
+R13
 Abehaviour
 R2
 R3
-DEx4 work 5 reg_n 0 22 ]SP4l?H3Bn0^4EMEf]I1X3
+DEx4 work 5 reg_n 0 22 mI[nUVK^K1FoQzkiH^?^e1
 l19
 L18
-VV:^C6@6:Dc@;@B27^70__0
+VHmm]2Qj<GZl99aP:VcmzH1
+!s100 ZflF3Uom88<R:Zb:d^5o[0
 R7
 32
-R46
-R47
-R48
-R11
-R12
-!s100 1k0XlY8HWS[Y=CR1Yz[mE1
+R8
 !i10b 1
-Etext_in
+R17
+R48
+R49
+!i113 1
+R12
 R13
+Etext_in
+Z50 w1558383223
 R1
 R2
 R3
 R4
-Z49 8/home/matteo/git/tutoring_hkn/example-project/tb/text_in.vhd
-Z50 F/home/matteo/git/tutoring_hkn/example-project/tb/text_in.vhd
+Z51 8/home/michi/Documents/git-projects/tutoring_hkn/example-project/tb/text_in.vhd
+Z52 F/home/michi/Documents/git-projects/tutoring_hkn/example-project/tb/text_in.vhd
 l0
 L13
-V0bP5V2E:I7o:=VM6MAiG:1
+Vm1022]KM^fe:a3GHzjgjI2
+!s100 G[0l8`gBO@6IlFZQzn?8@2
 R7
 32
-Z51 !s108 1542387734.384484
-Z52 !s90 -reportprogress|300|-work|work|-2002|-explicit|/home/matteo/git/tutoring_hkn/example-project/tb/text_in.vhd|
-Z53 !s107 /home/matteo/git/tutoring_hkn/example-project/tb/text_in.vhd|
-R11
-R12
-!s100 5h_NlAfT41F96hgLV:UA[0
+R8
 !i10b 1
+R17
+Z53 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/michi/Documents/git-projects/tutoring_hkn/example-project/tb/text_in.vhd|
+Z54 !s107 /home/michi/Documents/git-projects/tutoring_hkn/example-project/tb/text_in.vhd|
+!i113 1
+R12
+R13
 Abehaviour
 R1
 R2
 R3
-DEx4 work 7 text_in 0 22 0bP5V2E:I7o:=VM6MAiG:1
-l31
-L27
-Vz=ZBh`Y7[l3S`4^FF5Lc;0
-!s100 79C]Ogh?==[NFHm`8_?VM3
+DEx4 work 7 text_in 0 22 m1022]KM^fe:a3GHzjgjI2
+l28
+L26
+V7_OFM<@<b8@onTUjZESbc2
+!s100 VOmo0z>=>a]:`I8>>OI`M1
 R7
 32
-R51
-R52
-R53
-R11
-R12
+R8
 !i10b 1
-Etext_out
+R17
+R53
+R54
+!i113 1
+R12
 R13
+Etext_out
+Z55 w1558383217
 R1
 R2
 R3
 R4
-Z54 8/home/matteo/git/tutoring_hkn/example-project/tb/text_out.vhd
-Z55 F/home/matteo/git/tutoring_hkn/example-project/tb/text_out.vhd
+Z56 8/home/michi/Documents/git-projects/tutoring_hkn/example-project/tb/text_out.vhd
+Z57 F/home/michi/Documents/git-projects/tutoring_hkn/example-project/tb/text_out.vhd
 l0
 L12
-Vg:3;207FYAg3a9CZRjGXX1
-!s100 >naSU4zKPXWhZkm1D_n@G2
+V8h5HAfCUAHVTadBjjho3@3
+!s100 inAEdXHM65ZB:QzT2cg?W2
 R7
 32
+R8
 !i10b 1
-Z56 !s108 1542387734.409555
-Z57 !s90 -reportprogress|300|-work|work|-2002|-explicit|/home/matteo/git/tutoring_hkn/example-project/tb/text_out.vhd|
-Z58 !s107 /home/matteo/git/tutoring_hkn/example-project/tb/text_out.vhd|
-R11
+R17
+Z58 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/michi/Documents/git-projects/tutoring_hkn/example-project/tb/text_out.vhd|
+Z59 !s107 /home/michi/Documents/git-projects/tutoring_hkn/example-project/tb/text_out.vhd|
+!i113 1
 R12
+R13
 Abehaviour
 R1
 R2
 R3
-Z59 DEx4 work 8 text_out 0 22 g:3;207FYAg3a9CZRjGXX1
-l29
-L25
-Z60 VkY?DN>zIMUI=nNQg0c<z`1
-Z61 !s100 O3]cm^[oKH4RQK6M>e_;=2
+Z60 DEx4 work 8 text_out 0 22 8h5HAfCUAHVTadBjjho3@3
+l25
+L23
+Z61 V5B4kigi`I5AUm1`c_>J6`0
+Z62 !s100 nzbZcQEaPn2Zf[GADX3XG0
 R7
 32
+R8
 !i10b 1
-R56
-R57
+R17
 R58
-R11
+R59
+!i113 1
 R12
+R13

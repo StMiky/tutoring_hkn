@@ -17,14 +17,10 @@ entity text_out is
         enable: in std_logic; -- enable signal
         file_name: in string; -- name of the output file
         data_in: in std_logic_vector(bit_n-1 downto 0) -- Data to be written on the file
-        -- mode: in string
-		  -- done: out std_logic
     );
 end text_out;
 
 architecture behaviour of text_out is
-
-    signal linenumber: integer:=1;
 
 begin
     writing_process: process(clock, enable, data_in)
@@ -43,10 +39,6 @@ begin
                     writeline(output_file, line_buffer); -- writes the buffer content to the file
             end if;
         end if;
-
-        -- done <= EOF;
-
-        -- file_close(output_file);
 
     end process;
 

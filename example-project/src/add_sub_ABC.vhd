@@ -93,7 +93,7 @@ architecture structure of add_sub_ABC is
 	
 	signal 
 	sign_wire,
-   	en_regA,
+   en_regA,
 	en_regB,
 	en_regC,
 	en_regSum,
@@ -103,6 +103,7 @@ architecture structure of add_sub_ABC is
 	
 begin
 
+	-- Control Unit
 	CU : add_sub_ABC_CU 
 		port map 
 		(
@@ -121,6 +122,7 @@ begin
 			done => done
 		);
 	 
+	-- Datapath
 	DP : add_sub_ABC_DP 
 		generic map 
 			( n => nBit_in )

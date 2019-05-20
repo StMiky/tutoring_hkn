@@ -4,7 +4,7 @@ use ieee.std_logic_1164.all;
 entity reg_n is
 	generic ( n : integer := 3 );
 	port ( 
-	       	clk,
+	      clk,
 			en,
 			rst_n,
 			clr: in std_logic;   
@@ -25,7 +25,7 @@ begin
 		elsif (clk'event and clk = '1') then
 			if (clr = '1') then 
 				Q <= (OTHERS => '0');
-			else
+			elsif (en = '1') then
 				Q <= D;
 			end if;
 		end if;

@@ -5,9 +5,9 @@ use ieee.numeric_std.all;
 entity adder_sub_beh is
 	generic ( n : integer := 3 );
 	port (
-	       	sub : in std_logic;
+	      sub : in std_logic;
 	
-	       	in0,
+	      in0,
 			in1 : in std_logic_vector(n-1 downto 0);
 			 
 			out0 : out std_logic_vector(n downto 0)

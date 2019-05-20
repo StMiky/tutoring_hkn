@@ -12,25 +12,25 @@ entity add_sub_ABC_DP is
 	generic ( n : integer := 3 );
 	port (
 		    -- INPUTS
-			   	-- control signals
+			   -- control signals
 				clk,
 				rst_n,
 				clr_regs,
 				clr_regSum,
-			   	en_regA,
-			   	en_regB,
-			   	en_regC,
-			   	en_regSum,
-			   	sel,
-			   	sub : in std_logic;
+			   en_regA,
+			   en_regB,
+			   en_regC,
+			   en_regSum,
+			   sel,
+			   sub : in std_logic;
 			 
-			   	-- data signals
+			   -- data signals
 				A,
 				B,
 				C : in std_logic_vector(n-1 downto 0);
 				
 			-- OUTPUTS
-			   	data_out : out std_logic_vector(n downto 0)
+			   data_out : out std_logic_vector(n downto 0)
 	      );
 end add_sub_ABC_DP;
 
@@ -90,6 +90,7 @@ architecture behaviour of add_sub_ABC_DP is
 begin
 
 	-- INPUT REGISTERS
+	-- If nothing is known about who generates/receives the input signals, it's always a good choice to insert input/output registers
 	reg_A : reg_n 
 		GENERIC MAP 
 			( n => n )  
@@ -128,6 +129,8 @@ begin
 			D => C,
 			Q => add1
 		);
+
+	-- NOTICE: sign is already "sampled" by the control unit, so an input FF is not necessary. This helps synchronization too
 		
 	-- INPUT MUX
 	mux_AB : mux2 

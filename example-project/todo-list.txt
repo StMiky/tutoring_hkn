@@ -1,3 +1,0 @@
-- Introdurre version control (git + GitHub): pushare i file "verdi" nella repo e farr vedere la lista dei commit
-- add-sub contiene un esempio di come un progetto NON VADA ORGANIZZATO
-- 

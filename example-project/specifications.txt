@@ -1,2 +1,0 @@
-Design a circuit that:
-- A start signal arrives together with the first set of data (A, B, C, sign)
